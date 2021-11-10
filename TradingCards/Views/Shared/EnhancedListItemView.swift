@@ -8,13 +8,34 @@
 import SwiftUI
 
 struct EnhancedListItemView: View {
+    
+    let imageName: String
+    let title: String
+    let subTitle: String
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Image(imageName)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 50, height: 50, alignment: .center)
+                .clipped()
+            VStack(alignment: .leading){
+                Text(title)
+                    .bold()
+                Text(subTitle)
+                    .font(.caption)
+            }
+            
+        }
+        
     }
 }
 
 struct EnhancedListItemView_Previews: PreviewProvider {
     static var previews: some View {
-        EnhancedListItemView()
+        
+        EnhancedListItemView(imageName: "Ronaldo", title: "Soccer Pro Athlete", subTitle: "Ronaldo shows great excellence while he plays the crowds favorite sport. Soccer!")
     }
 }
