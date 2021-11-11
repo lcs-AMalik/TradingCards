@@ -10,7 +10,7 @@ import SwiftUI
 struct DetailView: View {
     
     //MARK: Stored properties
-    let item: FavouriteThing
+    let item: TradingCard
     
     var body: some View {
         ScrollView {

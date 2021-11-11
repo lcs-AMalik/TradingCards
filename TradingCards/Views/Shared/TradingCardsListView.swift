@@ -28,7 +28,7 @@ struct TradingCardsListView: View {
             }
             
         }
-        .navigationTitle("My Favourite Things")
+        .navigationTitle("My Trading Cards")
         
     }
 }

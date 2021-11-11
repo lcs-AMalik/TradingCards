@@ -20,6 +20,10 @@ struct PhotoCaptionView: View {
     var body: some View {
         VStack(alignment: .leading) {
             
+            background(Color.black)
+                .padding()
+            
+            
             Image(imageName)
                 .resizable()
                 .scaledToFit()
