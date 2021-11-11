@@ -14,18 +14,56 @@ struct DetailView: View {
     
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading) {
+            
+            VStack {
+                Color.black
+                .padding(.vertical)
+            }
+            
+            VStack(spacing: 0) {
                 
                 PhotoCaptionView(imageName: item.imageName,
-                                 caption: item.imageCaption,
+                                caption: item.imageCaption,
                                  credit: item.imageCredit)
+                
+                    .background(Color.yellow)
+                    .padding(.horizontal)
+                    .edgesIgnoringSafeArea(.bottom)
+                
+                //    .background(Color.white)
+                    .padding()
+                //    .edgesIgnoringSafeArea(.bottom)
+
+                    .background(Color.black)
+                     .padding(.horizontal)
+                    .edgesIgnoringSafeArea(.bottom)
+                
+                    .background(Color.white)
+                  //  .padding()
+                    .edgesIgnoringSafeArea(.bottom)
+                
+                Spacer()
+                
+                VStack {
+                    Color.black
+                    .padding(.vertical)
+                }
                 
                 Text(item.bodyText)
                     .padding()
                 
                 Spacer()
+                
+                VStack {
+                    Color.black
+                    .padding(.vertical)
+                }
             }
         }
+      //  .background(Color.blue)
+      //  .padding(.horizontal)
+      //  .edgesIgnoringSafeArea(.bottom)
+       // Spacer()
         .navigationTitle(item.title)
     }
 }

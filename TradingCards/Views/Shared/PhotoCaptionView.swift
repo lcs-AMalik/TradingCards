@@ -20,13 +20,28 @@ struct PhotoCaptionView: View {
     var body: some View {
         VStack(alignment: .leading) {
             
-            background(Color.black)
-                .padding()
+     //       HStack {
+     //           Color.red
+     //               .padding(.vertical)
+      //      }
             
+            Spacer(minLength: 20)
             
             Image(imageName)
                 .resizable()
                 .scaledToFit()
+                .padding()
+            
+      //      HStack {
+      //          Color.red
+      //              .padding(.vertical)
+                  //  .frame(height: 80)
+                
+      //      }
+            
+         //   Color.blue
+        //        .padding()
+
             
             Group {
                 Text(caption)
@@ -41,6 +56,7 @@ struct PhotoCaptionView: View {
         }
     }
 }
+
 struct PhotoCaptionView_Previews: PreviewProvider {
     static var previews: some View {
         
