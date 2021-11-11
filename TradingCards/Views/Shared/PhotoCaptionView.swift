@@ -19,29 +19,13 @@ struct PhotoCaptionView: View {
     // MARK: Computed properties
     var body: some View {
         VStack(alignment: .leading) {
-            
-     //       HStack {
-     //           Color.red
-     //               .padding(.vertical)
-      //      }
-            
+                        
             Spacer(minLength: 20)
             
             Image(imageName)
                 .resizable()
                 .scaledToFit()
                 .padding()
-            
-      //      HStack {
-      //          Color.red
-      //              .padding(.vertical)
-                  //  .frame(height: 80)
-                
-      //      }
-            
-         //   Color.blue
-        //        .padding()
-
             
             Group {
                 Text(caption)
