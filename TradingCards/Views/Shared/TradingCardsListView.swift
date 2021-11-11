@@ -9,7 +9,27 @@ import SwiftUI
 
 struct TradingCardsListView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        List{
+            
+            ForEach(listOfItems) { currentItem in
+                
+                NavigationLink(destination: {
+                    
+                    DetailView(item: currentItem)
+                    
+                }, label: {
+                    
+                    EnhancedListItemView(imageName: currentItem.imageName,
+                                    title:currentItem.title,
+                                    subTitle:currentItem.navigationSubtitle)
+                })
+                
+            }
+            
+        }
+        .navigationTitle("My Favourite Things")
+        
     }
 }
 
@@ -18,3 +38,4 @@ struct TradingCardsListView_Previews: PreviewProvider {
         TradingCardsListView()
     }
 }
+

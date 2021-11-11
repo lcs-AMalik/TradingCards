@@ -8,14 +8,34 @@
 import SwiftUI
 
 struct DetailView: View {
+    
+    //MARK: Stored properties
+    let item: FavouriteThing
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ScrollView {
+            VStack(alignment: .leading) {
+                
+                PhotoCaptionView(imageName: item.imageName,
+                                 caption: item.imageCaption,
+                                 credit: item.imageCredit)
+                
+                Text(item.bodyText)
+                    .padding()
+                
+                Spacer()
+            }
+        }
+        .navigationTitle(item.title)
     }
 }
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView()
+        NavigationView {
+            DetailView(item: listOfItems.first!)
+        }
     }
 }
+    
+    
